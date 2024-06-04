@@ -13,7 +13,11 @@ const Movie = () => {
   const [movieData, setMovieData] = useState(null);
   const [sampleNames, setSampleNames] = useState([]);
   
-  const fetchSampleNames = async () => {
+
+
+  useEffect(() => {
+
+    const fetchSampleNames = async () => {
     const x='https://movie-library-cl10.onrender.com/api/samples/'+email;
     console.log(x);
     try {
@@ -25,10 +29,9 @@ const Movie = () => {
       console.error(error);
     }
   };
-
-  useEffect(() => {
+    
     fetchSampleNames();
-  },);
+  },[]);
 
   const handleChange1 = (e) => {
     setSearchTerm1(e.target.value);
