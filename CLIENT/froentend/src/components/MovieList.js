@@ -24,7 +24,7 @@ const MovieList = () => {
 
   const handleAddToList = async () => {
     try {
-      await axios.post('http://localhost:2000/api/lists', {
+      await axios.post('https://movie-playlist-zr2o.vercel.app/api/lists', {
         email,
         movieName,
         listName: selectedSample
