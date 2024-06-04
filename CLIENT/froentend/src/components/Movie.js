@@ -14,7 +14,7 @@ const Movie = () => {
   const [sampleNames, setSampleNames] = useState([]);
   
   const fetchSampleNames = async () => {
-    const x='http://localhost:2000/api/samples/'+email;
+    const x='http://movie-library-cl10.onrender.com/api/samples/'+email;
     console.log(x);
     try {
       const response = await axios.get(x);
