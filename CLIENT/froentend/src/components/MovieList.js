@@ -15,7 +15,7 @@ const MovieList = () => {
 
   const fetchSampleNames = async () => {
     try {
-      const response = await axios.get(`http://localhost:2000/api/samples/${email}`);
+      const response = await axios.get(`https://movie-playlist-zr2o.vercel.app/api/samples/${email}`);
       setSampleNames(response.data.map(sample => sample.name));
     } catch (error) {
       console.error(error);
