@@ -18,7 +18,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://movie-playlist-zr2o.vercel.app/api/users/signup', formData);
+      const response = await axios.post('http://movie-library-cl10.onrender.com/api/users/signup', formData);
       console.log(response.data);
       navigate('/'); // Navigate to home after successful signup
     } catch (error) {
