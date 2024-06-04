@@ -39,7 +39,7 @@ const Movie = () => {
 
   const addSample = async (name) => {
     try {
-      const response = await axios.post('http://localhost:2000/api/samples', {
+      const response = await axios.post('https://movie-playlist-zr2o.vercel.app/api/samples', {
         name,
         email // Use the email from the URL
       });
