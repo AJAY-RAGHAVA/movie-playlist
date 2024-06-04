@@ -14,7 +14,7 @@ const Movie = () => {
   const [sampleNames, setSampleNames] = useState([]);
   
   const fetchSampleNames = async () => {
-    const x='http://movie-library-cl10.onrender.com/api/samples/'+email;
+    const x='https://movie-library-cl10.onrender.com/api/samples/'+email;
     console.log(x);
     try {
       const response = await axios.get(x);
@@ -39,7 +39,7 @@ const Movie = () => {
 
   const addSample = async (name) => {
     try {
-      const response = await axios.post('https://movie-playlist-zr2o.vercel.app/api/samples', {
+      const response = await axios.post('https://movie-library-cl10.onrender.com/api/samples', {
         name,
         email // Use the email from the URL
       });
