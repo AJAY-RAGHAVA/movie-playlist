@@ -78,7 +78,7 @@ const Card = () => {
 
   const fetchMovieData = useCallback(async () => {
     try {
-      const response = await axios.get(`http://movie-library-cl10.onrender.com/api/lists/${email}`);
+      const response = await axios.get(`https://movie-library-cl10.onrender.com/api/lists/${email}`);
       const filteredList = response.data.filter(item => item.listName === sampleName);
       
       if (filteredList.length > 0) {
